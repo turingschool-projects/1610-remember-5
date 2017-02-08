@@ -19,6 +19,18 @@ export default Ember.Route.extend({
       date: 'Date',
       notes: 'Notes',
       pinned: false,
+    },
+    {
+      title: 'Reminder4',
+      date: 'Date',
+      notes: 'Notes',
+      pinned: false,
+    },
+    {
+      title: 'Reminder5',
+      date: 'Date',
+      notes: 'Notes',
+      pinned: false,
     }]
 
   }
