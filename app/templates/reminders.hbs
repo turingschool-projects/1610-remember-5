@@ -1,6 +1,6 @@
 {{#each model as |reminder|}}
 
-  <div class='spec-reminder-item'>
+  <div class='spec-reminder-item' onClick={{action 'selectReminder'}}>
     <h3 class='spec-reminder-title'>{{reminder.title}}</h3>
     <p class='spec-reminder-date'>{{reminder.date}}</p>
     <p class='spec-reminder-notes'>{{reminder.notes}}</p>
