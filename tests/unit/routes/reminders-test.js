@@ -7,5 +7,5 @@ moduleFor('route:reminders', 'Unit | Route | reminders', {
 
 test('it exists', function(assert) {
   let route = this.subject();
-  assert.ok(route);
+  assert.equal(!!route, true);
 });
