@@ -6,3 +6,8 @@
 a {
   text-decoration: none;
 }
+
+.add-new-reminder {
+  display: flex;
+  flex-direction: column;
+}
