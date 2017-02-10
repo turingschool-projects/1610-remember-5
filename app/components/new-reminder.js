@@ -9,14 +9,8 @@ export default Ember.Component.extend({
 
   actions: {
     addReminder() {
-      console.log(this.getProperties('date'));
       const reminder = this.getProperties('title', 'date', 'notes');
-      this.get('store').createRecord('reminder', reminder).save().then(() => {
-        this.setProperties({
-          title: '',
-          date: '',
-          notes: '',
-        })
+      this.get('store').createRecord('reminder', reminder).save().then(() => {this.setProperties({title: '', date: '', notes: ''})
       })
     }
   }
