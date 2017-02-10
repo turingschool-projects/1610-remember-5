@@ -26,6 +26,17 @@ test('clicking on an individual item', function(assert) {
 
   andThen(function() {
     assert.equal(currentURL(), '/reminders/1');
-    assert.equal(Ember.$('.spec-reminder-item').find('.spec-reminder-title').text().trim(), Ember.$('.spec-reminder-title').text().trim());
+    assert.equal(find('.spec-reminder-item').find('.spec-reminder-title').text().trim(), Ember.$('.spec-reminder-title').text().trim());
   });
 });
+
+test('message display when no notes are in storage', function(assert) {
+  visit('/');
+
+  andThen(function() {
+    assert.equal(currentURL(), '/reminders');
+    assert.equal(find('.spec-reminder-item').length, 0, 'should not display any reminders if none exist');
+    assert.equal(find('.no-reminder-message').length, 1, 'should display prompt to add reminders if none exist')
+    assert.equal(find('.no-reminder-message').text(), 'Click below to add a new reminder.', 'should display prompt to add reminders if none exist')
+  })
+})
