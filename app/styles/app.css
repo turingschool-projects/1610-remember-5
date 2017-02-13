@@ -7,6 +7,10 @@ a {
   text-decoration: none;
 }
 
+.header {
+  background-color: limegreen;
+}
+
 .add-new-reminder {
   display: flex;
   flex-direction: column;
@@ -26,6 +30,8 @@ a {
 
 .indiv-reminder-display {
   width: 500px;
+  padding: 10px;
+  border-radius: 2.5px;
 }
 
 .add-reminder-btn {
