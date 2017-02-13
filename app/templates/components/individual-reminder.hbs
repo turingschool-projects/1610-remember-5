@@ -1,8 +1,21 @@
 <div class='active indiv-reminder-display'>
-  {{#if model.isEditable}}
+  {{#if model.editable}}
 
-  <!-- <input value={{model.title}} /> -->
-  <button>Save</button>
+  <form class='add-new-reminder' {{action 'addReminder' on='submit'}}>
+    <label>
+      Title
+      {{input class='new-reminder-title' type='text' value=model.title}}
+    </label>
+    <label>
+      Date
+      {{input class='new-reminder-date' type='date' value=model.date}}
+    </label>
+    <label>
+      Notes
+      {{textarea class='new-reminder-notes' type='text' value=model.notes cols='80' rows='6'}}
+    </label>
+    <button type='submit'>Save</button>
+  </form>
 
   {{else}}
 

@@ -6,8 +6,7 @@ export default Ember.Component.extend({
   actions: {
     toggleEdit() {
       this.get('store').findRecord('reminder', this.model.id).then((reminder) => {
-        reminder.set('editable', true).save()
-        // console.log(reminder.editable)
+        reminder.set('editable', true)
       })
     }
   }
