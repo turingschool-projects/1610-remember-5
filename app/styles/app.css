@@ -11,3 +11,14 @@ a {
   display: flex;
   flex-direction: column;
 }
+
+.reminder-list-container {
+  width: 30%;
+  display: inline-block;
+}
+
+.display-container {
+  width: 60%;
+  display: inline-block;
+  vertical-align: top;
+}
