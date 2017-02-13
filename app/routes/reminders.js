@@ -10,7 +10,7 @@ export default Ember.Route.extend({
 
   actions: {
     selectReminder() {
-      console.log('fuck yea!')
+      // console.log('fuck yea!')
     }
   }
 

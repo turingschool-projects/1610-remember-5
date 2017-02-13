@@ -9,6 +9,11 @@ a {
 
 .header {
   background-color: limegreen;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  font-size: 32px;
+  align-items: center;
 }
 
 .add-new-reminder {
@@ -19,6 +24,7 @@ a {
 .reminder-list-container {
   width: 30%;
   display: inline-block;
+  margin: 10px;
 }
 
 .display-container {
@@ -32,8 +38,13 @@ a {
   width: 500px;
   padding: 10px;
   border-radius: 2.5px;
+  margin: 10px;
 }
 
 .add-reminder-btn {
   width: 100px;
+}
+
+.btn:hover {
+  cursor: pointer;
 }
