@@ -21,4 +21,13 @@ a {
   width: 60%;
   display: inline-block;
   vertical-align: top;
+  margin-left: 40px;
+}
+
+.indiv-reminder-display {
+  width: 500px;
+}
+
+.add-reminder-btn {
+  width: 100px;
 }
