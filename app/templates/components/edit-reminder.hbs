@@ -1,5 +1,5 @@
 <div class='active indiv-reminder-display'>
-  <form class='edit-reminder-form' {{action 'updateReminder' on='submit'}}>
+  <form class='edit-reminder-form'>
     <label>
       Title
       {{input class='new-reminder-title' type='text' value=model.title}}
@@ -13,7 +13,8 @@
       {{textarea class='new-reminder-notes' type='text' value=model.notes cols='80' rows='6'}}
     </label>
     {{#link-to 'reminders.reminder' model.id}}
-      <button type='submit' class='save-updates-btn'>Save</button>
+      <button {{action 'updateReminder' on='click'}}>Save</button>
     {{/link-to}}
+    <button {{action 'undoChanges' on='click'}}>Undo</button>
   </form>
 </div>
