@@ -22,5 +22,10 @@ test('renders data from its model prop', function(assert) {
 
 test('renders a save button', function(assert) {
   this.render(hbs`{{edit-reminder model=model}}`)
-  assert.equal(this.$('button').text(), 'Save')
+  assert.equal(this.$('.save-updates-btn').text(), 'Save')
+})
+
+test('renders a undo button', function(assert) {
+  this.render(hbs`{{edit-reminder model=model}}`)
+  assert.equal(this.$('.undo-updates-btn').text(), 'Undo')
 })

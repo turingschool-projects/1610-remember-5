@@ -46,3 +46,16 @@ test('redirects from /edit after clicking save', function(assert) {
     assert.equal(currentURL(), '/reminders/1')
   })
 })
+
+test('reverts to saved changes when revert button clicked', function(assert) {
+  let initialTitle = find('.new-reminder-title').val()
+  fillIn('.new-reminder-title', 'Awesome Title')
+
+  andThen(function() {
+    assert.equal(find('.new-reminder-title').val(), 'Awesome Title', 'should accept new title input')
+  })
+  click('.undo-updates-btn')
+  andThen(function() {
+    assert.equal(find('.new-reminder-title').val(), initialTitle, 'should revert to initial title')
+  })
+})

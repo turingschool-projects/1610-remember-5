@@ -13,8 +13,8 @@
       {{textarea class='new-reminder-notes' type='text' value=model.notes cols='80' rows='6'}}
     </label>
     {{#link-to 'reminders.reminder' model.id}}
-      <button {{action 'updateReminder' on='click'}}>Save</button>
+      <button class='save-updates-btn' {{action 'updateReminder' on='click'}}>Save</button>
     {{/link-to}}
-    <button {{action 'undoChanges' on='click'}}>Undo</button>
+    <button class='undo-updates-btn' {{action 'undoChanges' on='click'}}>Undo</button>
   </form>
 </div>
