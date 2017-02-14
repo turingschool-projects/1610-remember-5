@@ -1,3 +1,4 @@
+
 <div class='active indiv-reminder-display'>
   {{#if model.editable}}
 
@@ -14,7 +15,7 @@
       Notes
       {{textarea class='new-reminder-notes' type='text' value=model.notes cols='80' rows='6'}}
     </label>
-    <button type='submit'>Save</button>
+    <button type='submit' {{ action 'updateReminder' on='click' }}>Save</button>
   </form>
 
   {{else}}
