@@ -56,3 +56,11 @@ a {
 .btn:hover {
   cursor: pointer;
 }
+
+.reminder-status {
+  color: green;
+}
+
+.tay-tay {
+  color: red;
+}

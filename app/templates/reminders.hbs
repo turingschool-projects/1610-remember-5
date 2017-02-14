@@ -4,7 +4,7 @@
       {{#link-to 'reminders.reminder' reminder.id}}
         <div class='spec-reminder-item' >
           <h3 class='spec-reminder-title'>{{reminder.title}}</h3>
-          <p class='reminder-status clean'>☑</p>
+          <p class='reminder-status {{if reminder.hasDirtyAttributes "tay-tay"}}'>☑</p>
         </div>
       {{/link-to}}
     {{/each}}
