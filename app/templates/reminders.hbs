@@ -1,21 +1,24 @@
+<div class='reminder-list-container'>
+  {{#if model}}
+    {{#each model as |reminder|}}
+      {{#link-to 'reminders.reminder' reminder.id}}
+        <div class='spec-reminder-item' >
+          <h3 class='spec-reminder-title'>{{reminder.title}}</h3>
+          <p class='spec-reminder-date'>{{reminder.date}}</p>
+          <p class='spec-reminder-notes'>{{reminder.notes}}</p>
+          <br>
+        </div>
+      {{/link-to}}
+    {{/each}}
+  {{else}}
+    <h3 class='no-reminder-message'>Click below to add a new reminder.</h3>
+  {{/if}}
 
-{{#if model}}
-  {{#each model as |reminder|}}
-    {{#link-to 'reminders.reminder' reminder.id}}
-      <div class='spec-reminder-item' >
-        <h3 class='spec-reminder-title'>{{reminder.title}}</h3>
-        <p class='spec-reminder-date'>{{reminder.date}}</p>
-        <p class='spec-reminder-notes'>{{reminder.notes}}</p>
-        <br>
-      </div>
-    {{/link-to}}
-  {{/each}}
-{{else}}
-  <h3 class='no-reminder-message'>Click below to add a new reminder.</h3>
-{{/if}}
+  {{#link-to 'reminders.new'}}
+    <button class='addNew-btn btn'>Add New Reminder</button>
+  {{/link-to}}
+</div>
 
-{{#link-to 'reminders.new'}}
-  <button class='addNew-btn btn'>Add New Reminder</button>
-{{/link-to}}
-
-{{outlet}}
+<div class='display-container'>
+  {{outlet}}
+</div>
