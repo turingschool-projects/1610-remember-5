@@ -82,6 +82,8 @@ test('tay-tay class toggles when reminder has dirty data', function(assert) {
 })
 
 test('delete button functionality', function(assert) {
+  assert.equal(currentURL(), '/reminders/1/edit')
+  assert.equal(find('.spec-reminder-item').length, 1, 'assert that the reminder exists on the dom')
   click('.delete-reminder-btn')
   andThen(function() {
     assert.equal(currentURL(), '/reminders', 'delete button should redirect to /reminders route')
