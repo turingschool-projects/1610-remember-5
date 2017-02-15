@@ -25,7 +25,7 @@ test('renders a save button', function(assert) {
   assert.equal(this.$('.save-updates-btn').text(), 'Save')
 })
 
-test('renders a undo button', function(assert) {
+test('does NOT render an undo button before changes are made', function(assert) {
   this.render(hbs`{{edit-reminder model=model}}`)
-  assert.equal(this.$('.undo-updates-btn').text(), 'Undo')
+  assert.equal(this.$('.undo-updates-btn').text(), '')
 })

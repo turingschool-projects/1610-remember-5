@@ -7,6 +7,11 @@
           <p class='reminder-status {{if reminder.hasDirtyAttributes "tay-tay"}}'>☑</p>
         </div>
       {{/link-to}}
+
+      {{#link-to 'reminders'}}
+        {{delete-reminder model=reminder}}
+      {{/link-to}}
+
     {{/each}}
   {{else}}
     <h3 class='no-reminder-message'>Click below to add a new reminder.</h3>

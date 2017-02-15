@@ -38,6 +38,14 @@ test('updates value on save', function(assert) {
   })
 })
 
+test('toggle Undo button', function(assert) {
+  assert.equal(find('.undo-updates-btn').length, 0, 'does not render undo button if no changes are made')
+  fillIn('.new-reminder-title')
+  andThen(function() {
+    assert.equal(find('.undo-updates-btn').length, 1, 'renders undo button if changes have been made')
+  })
+})
+
 test('redirects from /edit after clicking save', function(assert) {
   fillIn('.new-reminder-title', 'Awesome Title')
   click('.save-updates-btn')
@@ -71,4 +79,14 @@ test('tay-tay class toggles when reminder has dirty data', function(assert) {
   andThen(function() {
     assert.equal(find('.tay-tay').length, 0, 'should no longer have tay-tay class when dirty data exists')
   })
+})
+
+test('delete button functionality', function(assert) {
+  click('.delete-reminder-btn')
+  andThen(function() {
+    assert.equal(currentURL(), '/reminders', 'delete button should redirect to /reminders route')
+    assert.equal(find('.spec-reminder-item').length, 0, 'should not feature reminder on main reminder list')
+  })
+
+
 })

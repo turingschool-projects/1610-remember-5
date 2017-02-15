@@ -18,5 +18,10 @@
     {{#if model.hasDirtyAttributes}}
       <button class='undo-updates-btn' {{action 'undoChanges'}}>Undo</button>
     {{/if}}
+
+    {{#link-to 'reminders'}}
+      {{delete-reminder model=model}}
+    {{/link-to}}
+
   </form>
 </div>
