@@ -1,3 +1,11 @@
+@import url('https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700|Shadows+Into+Light');
+
+/*  general styles  */
+
+body {
+  font-family: 'Quicksand', sans-serif;
+}
+
 .active {
   background-color: peru;
   color: pink;
@@ -7,24 +15,73 @@ a {
   text-decoration: none;
 }
 
-.header {
-  background-color: limegreen;
-  height: 40px;
-  display: flex;
-  justify-content: center;
-  font-size: 32px;
-  align-items: center;
+.btn {
+
 }
 
-.add-new-reminder {
-  display: flex;
-  flex-direction: column;
+.btn:hover {
+  cursor: pointer;
 }
+
+
+
+
+/*  header styles */
+
+.header {
+  height: 75px;
+  background-color: #CEDBD8;
+  display: flex;
+  justify-content: center;
+  font-size: 50px;
+  align-items: center;
+  box-shadow: 1px 1px 10px #353837;
+}
+
+.rem-text {
+  font-weight: 500;
+}
+
+.ember-text {
+  font-family: 'Shadows Into Light', cursive;
+  font-weight: 700;
+}
+
+
+
+/*  Reminder List Styles  */
 
 .reminder-list-container {
   width: 30%;
   display: inline-block;
-  margin: 10px;
+  margin: 20px 30px;
+}
+
+.reminders-title {
+  font-size: 24px;
+  font-weight: 500;
+  border-bottom: 2px solid;
+  padding: 2px 0;
+}
+
+.reminder-title-list {
+  margin: 5px 8px;
+}
+
+.spec-reminder-item {
+  display: flex;
+  flex-direction: row;
+  font-size: 18px;
+}
+
+.spec-reminder-title {
+  align-self: flex-end;
+}
+
+.reminder-status {
+  margin-right: 5px;
+  font-size: 20px;
+  color: green;
 }
 
 .display-container {
@@ -34,6 +91,15 @@ a {
   margin-left: 40px;
 }
 
+
+
+/*  new reminder form styles  */
+
+.add-new-reminder-form {
+  display: flex;
+  flex-direction: column;
+}
+
 .indiv-reminder-display {
   width: 500px;
   padding: 10px;
@@ -41,24 +107,8 @@ a {
   margin: 10px;
 }
 
-.spec-reminder-item {
-  display: flex;
-  flex-direction: row;
-}
-.spec-reminder-item p {
-  margin-left: 5px;
-}
-
 .add-reminder-btn {
   width: 100px;
-}
-
-.btn:hover {
-  cursor: pointer;
-}
-
-.reminder-status {
-  color: green;
 }
 
 .tay-tay {

@@ -1,18 +1,20 @@
 <div class='reminder-list-container'>
   {{#if model}}
+    <h1 class='reminders-title'> REMINDERS: </h1>
+    <div class='reminder-title-list'>
     {{#each model as |reminder|}}
       {{#link-to 'reminders.reminder' reminder.id}}
         <div class='spec-reminder-item' >
-          <h3 class='spec-reminder-title'>{{reminder.title}}</h3>
           <p class='reminder-status {{if reminder.hasDirtyAttributes "tay-tay"}}'>☑</p>
+          <h3 class='spec-reminder-title'>{{reminder.title}}</h3>
         </div>
       {{/link-to}}
 
       {{#link-to 'reminders'}}
         {{delete-reminder model=reminder}}
       {{/link-to}}
-
     {{/each}}
+  </div>
   {{else}}
     <h3 class='no-reminder-message'>Click below to add a new reminder.</h3>
   {{/if}}
