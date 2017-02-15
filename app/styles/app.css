@@ -41,10 +41,26 @@ a {
   margin: 10px;
 }
 
+.spec-reminder-item {
+  display: flex;
+  flex-direction: row;
+}
+.spec-reminder-item p {
+  margin-left: 5px;
+}
+
 .add-reminder-btn {
   width: 100px;
 }
 
 .btn:hover {
   cursor: pointer;
+}
+
+.reminder-status {
+  color: green;
+}
+
+.tay-tay {
+  color: red;
 }

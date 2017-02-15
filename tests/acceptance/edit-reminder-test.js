@@ -59,3 +59,16 @@ test('reverts to saved changes when revert button clicked', function(assert) {
     assert.equal(find('.new-reminder-title').val(), initialTitle, 'should revert to initial title')
   })
 })
+
+test('tay-tay class toggles when reminder has dirty data', function(assert) {
+  fillIn('.new-reminder-title', 'Awesome Title')
+
+  andThen(function() {
+    assert.equal(find('.tay-tay').length, 1, 'should have tay-tay class when dirty data exists')
+  })
+  click('.undo-updates-btn')
+
+  andThen(function() {
+    assert.equal(find('.tay-tay').length, 0, 'should no longer have tay-tay class when dirty data exists')
+  })
+})

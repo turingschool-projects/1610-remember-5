@@ -27,12 +27,8 @@ test('should add a new reminder', function(assert) {
     andThen(function() {
       assert.equal(currentURL(), 'reminders/new');
       assert.equal(find('.spec-reminder-title').length, 1, 'should return a title field for new reminder')
-      assert.equal(find('.spec-reminder-date').length, 1, 'should return a date field for new reminder')
-      assert.equal(find('.spec-reminder-notes').length, 1, 'should return a notes field for new reminder')
 
       assert.equal(find('.spec-reminder-title').text(), 'Tell black bear his fly is unzipped', 'should show correct title for new reminder')
-      assert.equal(find('.spec-reminder-date').text(), '2017-02-10', 'should show correct date for new reminder')
-      assert.equal(find('.spec-reminder-notes').text(), 'He is embarrassing himself infront of everyone', 'should show correct notes for new reminder')
     })
   });
 });
