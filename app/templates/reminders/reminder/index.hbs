@@ -1,7 +1,7 @@
 <div class='active indiv-reminder-display'>
   <h1>{{model.title}}</h1>
-  <p>{{model.date}}</p>
-  <p>{{model.notes}}</p>
+  <p class='indiv-reminder-date'>{{model.date}}</p>
+  <p class='indiv-reminder-notes'>{{model.notes}}</p>
 
   {{#link-to 'reminders.reminder.edit' model.id}}
     <button class='btn edit-reminder-btn'>Edit</button>
