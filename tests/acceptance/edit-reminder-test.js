@@ -6,13 +6,12 @@ moduleForAcceptance('Acceptance | edit reminder', {
   beforeEach: function() {
     server.createList('reminder', 1);
     visit('/')
-    click('.spec-reminder-item:first')
+    click('.spec-reminder-title')
     click('.edit-reminder-btn')
   }
 });
 
 test('navigating to /edit', function(assert) {
-
   andThen(function() {
     assert.equal(currentURL(), '/reminders/1/edit')
   })

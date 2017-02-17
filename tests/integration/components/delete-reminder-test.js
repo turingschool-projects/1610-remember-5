@@ -10,7 +10,7 @@ test('it renders', function(assert) {
   assert.equal(this.$('.delete-reminder-btn').length, 1, 'should render a single button');
 });
 
-test('it has text of Delete', function(assert) {
+test('it has text of just an X', function(assert) {
   this.render(hbs`{{delete-reminder}}`);
-  assert.equal(this.$('.delete-reminder-btn').text(), 'Delete', "should have 'Delete' text on button ");
+  assert.equal(this.$('.delete-reminder-btn').text(), 'X', "should have 'Delete' text on button ");
 });

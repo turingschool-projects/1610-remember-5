@@ -8,7 +8,7 @@ moduleForComponent('new-reminder', 'Integration | Component | new reminder', {
 test('it renders', function(assert) {
 
   this.render(hbs`{{new-reminder}}`);
-  assert.equal(this.$('.add-new-reminder').length, 1, 'should render a form' )
+  assert.equal(this.$('.add-reminder-btn').length, 1, 'should render a form' )
 });
 
 test('renders a blank string in the inputs to start', function(assert) {

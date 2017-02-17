@@ -8,6 +8,6 @@ test('visiting /reminders/new', function(assert) {
 
   andThen(function() {
     assert.equal(currentURL(), 'reminders/new');
-    assert.equal(Ember.$('.add-new-reminder').length, 1, 'Renders one new-reminder form');
+    assert.equal(Ember.$('.add-new-reminder-form').length, 1, 'Renders one new-reminder form');
   });
 });
