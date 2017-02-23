@@ -22,7 +22,7 @@ test('clicking on an individual item', function(assert) {
   server.createList('reminder', 5);
 
   visit('/');
-  click('.spec-reminder-item:first');
+  click('.spec-reminder-title:first');
 
   andThen(function() {
     assert.equal(currentURL(), '/reminders/1');
@@ -59,7 +59,7 @@ test('message display when no notes are in storage', function(assert) {
   test('delete button on edit page', function(assert) {
     server.createList('reminder', 5);
     visit('/reminders');
-    click('.spec-reminder-item:first')
+    click('.spec-reminder-title:first')
     click('.edit-reminder-btn')
 
     andThen(function() {
